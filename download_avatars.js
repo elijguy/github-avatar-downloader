@@ -30,6 +30,7 @@ getRepoContributors("jquery", "jquery", function(err, result) {
   console.log("Result:", result);
   for (var i in result){
     console.log(result[i].avatar_url);
+    downloadImageByURL(result[i].avatar_url,("avatars/" + result[i].login + ".jpg"));
   }
 
 });
